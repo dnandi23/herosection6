@@ -1,0 +1,587 @@
+:root{
+    --maincolor : rgb(165, 31, 247);
+    --gradient : linear-gradient(
+    180deg,
+    rgb(165, 31, 247, 0.7)
+    rgb(193, 4, 134, 1)
+);
+}  
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,body{
+height: 100%;
+width: 100%;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#background{
+height: 100%;
+width: 100%;
+/* background: rgb(165,31,247);
+background: linear-gradient(180deg, rgba(165,31,247,0.7) 0%, rgba(193,4,134,1) 100%); */
+background: var(--maincolor);
+background: var(--gradient);
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+#image{
+position: absolute;
+height: 100%;
+width: 100%;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+z-index: -1;
+}
+#image img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+opacity: 0.3;
+}
+#hero{
+height: 80%;
+width: 90%;
+/* background: rgb(165,31,247);
+background: linear-gradient(180deg, rgba(165,31,247,0.7) 0%, rgba(193,4,134,1) 100%); */
+background: var(--maincolor);
+background: var(--gradient);
+box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.327);
+position: relative;
+z-index: 2;
+}
+#nav{
+height: 10%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0px 30px;
+gap: 20px;
+}
+#logo1 img{
+height: 50px;
+width: 80px;
+filter: invert(100%);
+}
+#nav ul{
+list-style: none;
+display: flex;
+gap:  20px;
+}
+#nav ul li{
+text-transform: uppercase;
+font-size: 20px;
+color: white;
+cursor: pointer;
+transition: all 0.5s;
+}
+#nav ul li:hover{
+color: black;
+}
+#logo2{
+display: flex;
+gap: 40px;
+cursor: pointer;
+}
+#logo2 i{
+font-size: 25px;
+filter: invert(100%);
+transition: all 0.5s;
+}
+#logo2 i:hover{
+filter: none;
+}
+#nav .bi-list{
+display: none;
+}
+#heromain{
+height: 90%;
+width: 100%;
+display: flex;
+}
+#heroleft{
+height: 100%;
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+padding: 0px 60px;
+gap: 5px;
+}
+#heroleft h1{
+text-transform: uppercase;
+font-size: 80px;
+color: white;
+}
+#heroleft p{
+font-size: 18px;
+color: white;
+}
+#p1{
+text-transform: uppercase;
+}
+#heroleft button{
+padding: 10px 40px;
+margin-top: 8%;
+background-color: transparent;
+font-size: 20px;
+color: white;
+text-transform: uppercase;
+border: 2px solid white;
+cursor: pointer;
+transition: all 0.5s;
+}
+#heroleft button:hover{
+font-size: 21px;
+background-color: white;
+color: var(--maincolor);
+}
+#heroright{
+height: 100%;
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#circle{
+height: 490px;
+width: 490px;
+background-color: white;
+border-radius: 50%;
+}
+#circle img{
+transform: scale(1.5) rotate(350deg) translateX(-30px);
+}
+/* responsiveness for all devices starts from here */
+@media screen and (min-width: 0px) and (max-width: 280px) {
+    #nav{
+        padding: 0px 10px;
+    }
+    #nav #logo1 img{
+        height: 30px;
+        width: 50px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+     color: white;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+        width: 100%;
+    }
+    #heroleft h1{
+        font-size: 20px;
+    }
+    #heroleft p{
+        font-size: 12px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    #heroright{
+        display: none;
+    }
+    #heroright #circle{
+        display: none;
+    }
+    #heroright #circle img{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 281px) and (max-width: 380px) {
+    #nav{
+        padding: 0px 10px;
+    }
+    #nav #logo1 img{
+        height: 30px;
+        width: 50px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+        width: 100%;
+    }
+    #heroleft h1{
+        font-size: 20px;
+    }
+    #heroleft p{
+        font-size: 12px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    #heroright{
+        display: none;
+    }
+    #heroright #circle{
+        display: none;
+    }
+    #heroright #circle img{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 381px) and (max-width: 480px) {
+    #nav{
+        padding: 0px 10px;
+    }
+    #nav #logo1 img{
+        height: 50px;
+        width: 80px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+        width: 100%;
+    }
+    #heroleft h1{
+        font-size: 25px;
+    }
+    #heroleft p{
+        font-size: 15px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #heroright{
+        display: none;
+    }
+    #heroright #circle{
+        display: none;
+    }
+    #heroright #circle img{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 481px) and (max-width: 580px) {
+    #nav{
+        padding: 0px 10px;
+    }
+    #nav #logo1 img{
+        height: 50px;
+        width: 80px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+        width: 100%;
+    }
+    #heroleft h1{
+        font-size: 25px;
+    }
+    #heroleft p{
+        font-size: 15px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #heroright{
+        display: none;
+    }
+    #heroright #circle{
+        display: none;
+    }
+    #heroright #circle img{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 581px) and (max-width: 680px) {
+    #nav{
+        padding: 0px 10px;
+    }
+    #nav #logo1 img{
+        height: 50px;
+        width: 80px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+    }
+    #heroleft h1{
+        font-size: 25px;
+    }
+    #heroleft p{
+        font-size: 15px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #heroright #circle{
+        height: 220px;
+        width: 220px;   
+    }
+    #heroright #circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1) rotate(350deg) translate(-5%, -10%);
+    }
+}
+@media screen and (min-width: 681px) and (max-width: 780px) {
+    #nav{
+        padding: 0px 30px;
+    }
+    #nav #logo1 img{
+        height: 50px;
+        width: 80px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 10px ;
+        /* width: 100%; */
+    }
+    #heroleft h1{
+        font-size: 25px;
+    }
+    #heroleft p{
+        font-size: 15px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #heroright #circle{
+        height: 220px;
+        width: 220px;   
+    }
+    #heroright #circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1) rotate(350deg) translate(-5%, -10%);
+    }
+}
+@media screen and (min-width: 781px) and (max-width: 980px) {
+    #nav{
+        padding: 0px 150px;
+    }
+    #nav #logo1 img{
+        height: 50px;
+        width: 80px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        }
+    #heroleft{
+        padding: 0px 30px ;
+        /* width: 100%; */
+    }
+    #heroleft h1{
+        font-size: 48px;
+    }
+    #heroleft p{
+        font-size: 35px;
+    }
+    #heroleft button{
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    #heroright #circle{
+        height: 220px;
+        width: 220px;   
+    }
+    #heroright #circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1) rotate(350deg) translate(-5%, -10%);
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+    #nav{
+        padding: 0px 50px;
+    }
+    #nav #logo1 img{
+        height: 80px;
+        width: 110px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        font-size: 28px;
+        }
+    #heroleft{
+        padding: 0px 50px ;
+        /* width: 100%; */
+    }
+    #heroleft h1{
+        font-size: 33px;
+    }
+    #heroleft p{
+        font-size: 22px;
+    }
+    #heroleft button{
+        padding: 8px 15px;
+        font-size: 22px;
+    }
+    #heroright #circle{
+        /* display: none; */
+        height: 350px;
+        width: 350px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    #heroright #circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1) rotate(350deg) translate(-10%, -10%);
+    }
+    
+}
+@media screen and (min-width: 1101px) and (max-width: 1300px) {
+    #nav{
+        padding: 0px 50px;
+    }
+    #nav #logo1 img{
+        height: 80px;
+        width: 110px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav #logo2{
+        display: none;
+    }
+    #nav i{
+       color: white; 
+       font-size: 22px;
+    }
+    #nav .bi-list{
+        display: inline;
+        font-size: 30px;
+        }
+        
+    #heroleft{
+        padding: 0px 50px ;
+        /* width: 100%; */
+    }
+    #heroleft h1{
+        font-size: 45px;
+    }
+    #heroleft p{
+        font-size: 20px;
+    }
+    #heroleft button{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    #heroright #circle{
+        /* display: none; */
+        height: 350px;
+        width: 350px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    #heroright #circle img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform: scale(1) rotate(350deg) translate(-10%, -10%);
+    }
+    
+}
+
+
+
+
